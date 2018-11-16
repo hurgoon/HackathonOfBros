@@ -24,6 +24,8 @@ struct ShoppingList: Decodable, CustomStringConvertible {
 struct ShoppingItem: Decodable, CustomStringConvertible {
     let title: String
     let lprice: String
+    let link: String
+    let image: String
     
     var description: String {
         return "title = \(title), low Price = \(lprice)\n"

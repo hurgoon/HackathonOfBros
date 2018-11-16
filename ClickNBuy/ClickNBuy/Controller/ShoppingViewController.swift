@@ -8,11 +8,13 @@
 
 import UIKit
 
+
 class ShoppingViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var minimumPriceSearch: UISearchBar!
     var minimumPriceText = String()
-    var shoppingArray: Array<Any> = []
+    @IBOutlet weak var textLabelForBold: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +39,25 @@ class ShoppingViewController: UIViewController, UISearchBarDelegate {
             guard let data = data else { return }
             
             let shoppingList = try! JSONDecoder().decode(ShoppingList.self, from: data)
-            self.shoppingArray = shoppingList.items
-            print("self.shoppingArray :", self.shoppingArray)
-            print("shoppingArray[0]", self.shoppingArray[0])
-            print("shoppingArray[1]", self.shoppingArray[1])
-        })
+            
+            var titleArray:[String] = []
+
+            titleArray = [shoppingList.items[0].title]
+            DispatchQueue.main.async {
+                self.textLabelForBold.text = titleArray[0]
+            }
+            
+            for i in 0...(shoppingList.items.count - 1) {
+                print(shoppingList.items[i].title)
+                print(shoppingList.items[i].lprice)
+                print(shoppingList.items[i].link)
+                print(shoppingList.items[i].image)
+                
+                
+            }
+    })
         task.resume()
-        print("shoppingArray at fachNaverAPI: ", shoppingArray)
+      
     }
-//    print("shoppingArrat at VC :", shoppingArray)
+
 }

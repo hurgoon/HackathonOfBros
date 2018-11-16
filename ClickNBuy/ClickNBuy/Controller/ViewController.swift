@@ -17,6 +17,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var probabilityLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
         
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
-        guard let model = try? VNCoreMLModel(for: VGG16().model) else { return }
+        guard let model = try? VNCoreMLModel(for: Resnet50().model) else { return }
         let request = VNCoreMLRequest(model: model)
         { (finishReq, err) in
 //            print(finishReq.results)
@@ -63,7 +64,10 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
             
             print(firstObservation.identifier, firstObservation.confidence)
             DispatchQueue.main.async {
-                self.displayLabel.text = firstObservation.identifier
+                let doubleDigitConfidenceLevel = Double(firstObservation.confidence)
+                self.probabilityLabel.text = firstObservation.identifier
+                self.displayLabel.text = "\(Double(doubleDigitConfidenceLevel) * 100)%"
+                
             }
             
             

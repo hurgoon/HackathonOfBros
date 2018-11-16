@@ -14,8 +14,7 @@
 		6A02238D219E5A1300FC0BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02238B219E5A1300FC0BB5 /* LaunchScreen.storyboard */; };
 		6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */; };
 		6A02239A219E5E4600FC0BB5 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */; };
-		6A02239C219E80B200FC0BB5 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A02239B219E80B200FC0BB5 /* SqueezeNet.mlmodel */; };
-		6A02239E219E86D600FC0BB5 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A02239D219E86D600FC0BB5 /* VGG16.mlmodel */; };
+		6A0223A0219EA37100FC0BB5 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +27,7 @@
 		6A02238E219E5A1300FC0BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
-		6A02239B219E80B200FC0BB5 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SqueezeNet.mlmodel; path = ../../../../../../../Downloads/SqueezeNet.mlmodel; sourceTree = "<group>"; };
-		6A02239D219E86D600FC0BB5 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = VGG16.mlmodel; path = ../../../../../../../Downloads/VGG16.mlmodel; sourceTree = "<group>"; };
+		6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */,
-				6A02239B219E80B200FC0BB5 /* SqueezeNet.mlmodel */,
-				6A02239D219E86D600FC0BB5 /* VGG16.mlmodel */,
+				6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -171,10 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A0223A0219EA37100FC0BB5 /* Resnet50.mlmodel in Sources */,
 				6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */,
 				6A022385219E5A1200FC0BB5 /* ViewController.swift in Sources */,
-				6A02239E219E86D600FC0BB5 /* VGG16.mlmodel in Sources */,
-				6A02239C219E80B200FC0BB5 /* SqueezeNet.mlmodel in Sources */,
 				6A02239A219E5E4600FC0BB5 /* ShoppingViewController.swift in Sources */,
 				6A022383219E5A1200FC0BB5 /* AppDelegate.swift in Sources */,
 			);
