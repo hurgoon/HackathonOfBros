@@ -13,6 +13,7 @@
 		6A02238A219E5A1300FC0BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A022389219E5A1300FC0BB5 /* Assets.xcassets */; };
 		6A02238D219E5A1300FC0BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02238B219E5A1300FC0BB5 /* LaunchScreen.storyboard */; };
 		6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */; };
+		6A02239A219E5E4600FC0BB5 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6A02238C219E5A1300FC0BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A02238E219E5A1300FC0BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		6A022394219E5B0200FC0BB5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */,
 				6A022384219E5A1200FC0BB5 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -164,6 +167,7 @@
 			files = (
 				6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */,
 				6A022385219E5A1200FC0BB5 /* ViewController.swift in Sources */,
+				6A02239A219E5E4600FC0BB5 /* ShoppingViewController.swift in Sources */,
 				6A022383219E5A1200FC0BB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
