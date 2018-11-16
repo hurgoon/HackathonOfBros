@@ -8,15 +8,24 @@
 
 import UIKit
 
-class ShoppingViewController: UIViewController {
+class ShoppingViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var minimumPriceSearch: UISearchBar!
+    var minimumPriceText = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        minimumPriceSearch.delegate = self
+        
 
-        let minimumPriceText = minimumPriceSearch.text
-        fetchNaverAPI(query: "\(minimumPriceText)")
+
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.minimumPriceText = searchBar.text ?? ""
+        fetchNaverAPI(query: minimumPriceText)
+        print(minimumPriceText)
     }
     
     private func fetchNaverAPI(query: String) {
