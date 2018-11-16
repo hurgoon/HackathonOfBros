@@ -65,14 +65,40 @@
                     <view key="view" contentMode="scaleToFill" id="7Qb-2S-Otm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-hi-ahF">
+                                <rect key="frame" x="0.0" y="597.5" width="375" height="20.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9a-wC-Nyq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="597.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cKD-hi-ahF" firstAttribute="leading" secondItem="O9a-wC-Nyq" secondAttribute="leading" id="LoE-ce-fpT"/>
+                            <constraint firstItem="O9a-wC-Nyq" firstAttribute="top" secondItem="7Qb-2S-Otm" secondAttribute="top" id="RTT-Db-6gM"/>
+                            <constraint firstItem="cKD-hi-ahF" firstAttribute="top" secondItem="O9a-wC-Nyq" secondAttribute="bottom" id="SCk-Je-fVm"/>
+                            <constraint firstItem="O9a-wC-Nyq" firstAttribute="leading" secondItem="7Qb-2S-Otm" secondAttribute="leading" id="Ynr-LC-8aj"/>
+                            <constraint firstItem="cKD-hi-ahF" firstAttribute="trailing" secondItem="O9a-wC-Nyq" secondAttribute="trailing" id="dgD-FX-sw0"/>
+                            <constraint firstItem="cKD-hi-ahF" firstAttribute="bottom" secondItem="mNx-1S-afy" secondAttribute="bottom" id="sIn-ZV-Ktn"/>
+                            <constraint firstItem="O9a-wC-Nyq" firstAttribute="trailing" secondItem="7Qb-2S-Otm" secondAttribute="trailing" id="v0P-Yg-RNU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mNx-1S-afy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="jsg-OG-TQH"/>
+                    <connections>
+                        <outlet property="cameraView" destination="O9a-wC-Nyq" id="qWq-z4-Q7k"/>
+                        <outlet property="displayLabel" destination="cKD-hi-ahF" id="kAG-vb-HwN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEc-yp-WUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466" y="-419"/>
+            <point key="canvasLocation" x="464.80000000000001" y="-419.64017991004499"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7oT-Iv-5cn">

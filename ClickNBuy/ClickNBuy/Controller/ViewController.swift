@@ -12,8 +12,12 @@ import Vision
 
 
 
-class ViewController: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate {
+class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate {
 
+    
+    @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var displayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //       captureOutput()
@@ -34,16 +38,12 @@ class ViewController: UIViewController,  AVCaptureVideoDataOutputSampleBufferDel
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         view.layer.addSublayer(previewLayer)
         
-        previewLayer.frame = view.frame
+        previewLayer.frame = cameraView.frame
         
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(dataOutput)
         
-        
-       
-//
-//        VNImageRequestHandler(cgImage: <#T##CGImage#>, options: <#T##[VNImageOption : Any]#>).perform(<#T##requests: [VNRequest]##[VNRequest]#>)
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -51,18 +51,29 @@ class ViewController: UIViewController,  AVCaptureVideoDataOutputSampleBufferDel
         
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
-//        let model = ??
-        
-//
-//         let requeest = VNCoreMLRequest(model: <#T##VNCoreMLModel#>)
-//         { (finishedReq, err) in
-//            // perhaps check the erro
-//
-        
+        guard let model = try? VNCoreMLModel(for: VGG16().model) else { return }
+        let request = VNCoreMLRequest(model: model)
+        { (finishReq, err) in
+//            print(finishReq.results)
+            
+            guard let results = finishReq.results as? [VNClassificationObservation] else { return }
+            
+            guard let firstObservation =  results.first else { return }
+            
+            
+            print(firstObservation.identifier, firstObservation.confidence)
+            DispatchQueue.main.async {
+                self.displayLabel.text = firstObservation.identifier
+            }
+            
+            
+            
         }
-//        VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
-    
 
+        
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+    
+    }
    
 }
 
