@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27716634B4798F2C039D397F /* Pods_ClickNBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C744B4BCA4F06C6D3CF885 /* Pods_ClickNBuy.framework */; };
 		6A022383219E5A1200FC0BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022382219E5A1200FC0BB5 /* AppDelegate.swift */; };
 		6A022385219E5A1200FC0BB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022384219E5A1200FC0BB5 /* ViewController.swift */; };
 		6A022388219E5A1200FC0BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A022386219E5A1200FC0BB5 /* Main.storyboard */; };
@@ -15,9 +16,11 @@
 		6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */; };
 		6A02239A219E5E4600FC0BB5 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */; };
 		6A0223A0219EA37100FC0BB5 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */; };
+		6A54EDA2219EBC7600FB4122 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A54EDA1219EBC7600FB4122 /* VGG16.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		683A0D038B4C1EB8FEBE0BC3 /* Pods-ClickNBuy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickNBuy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickNBuy/Pods-ClickNBuy.release.xcconfig"; sourceTree = "<group>"; };
 		6A02237F219E5A1200FC0BB5 /* ClickNBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickNBuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A022382219E5A1200FC0BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A022384219E5A1200FC0BB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
+		6A54EDA1219EBC7600FB4122 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = VGG16.mlmodel; path = ../../../../../../../Downloads/VGG16.mlmodel; sourceTree = "<group>"; };
+		90C744B4BCA4F06C6D3CF885 /* Pods_ClickNBuy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClickNBuy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD7EB268933F95451B42771 /* Pods-ClickNBuy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickNBuy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClickNBuy/Pods-ClickNBuy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27716634B4798F2C039D397F /* Pods_ClickNBuy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E41BEBE316ACEABF80E4B27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBD7EB268933F95451B42771 /* Pods-ClickNBuy.debug.xcconfig */,
+				683A0D038B4C1EB8FEBE0BC3 /* Pods-ClickNBuy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6A022376219E5A1200FC0BB5 = {
 			isa = PBXGroup;
 			children = (
 				6A022381219E5A1200FC0BB5 /* ClickNBuy */,
 				6A022380219E5A1200FC0BB5 /* Products */,
+				5E41BEBE316ACEABF80E4B27 /* Pods */,
+				D6EE5D6E0ABC0244DFE57B2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */,
+				6A54EDA1219EBC7600FB4122 /* VGG16.mlmodel */,
 				6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */,
 			);
 			path = Modal;
@@ -97,6 +116,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D6EE5D6E0ABC0244DFE57B2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90C744B4BCA4F06C6D3CF885 /* Pods_ClickNBuy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A022391219E5A1300FC0BB5 /* Build configuration list for PBXNativeTarget "ClickNBuy" */;
 			buildPhases = (
+				D3AC10D20FFB2110B454C380 /* [CP] Check Pods Manifest.lock */,
 				6A02237B219E5A1200FC0BB5 /* Sources */,
 				6A02237C219E5A1200FC0BB5 /* Frameworks */,
 				6A02237D219E5A1200FC0BB5 /* Resources */,
+				F4C3C43400BAA0C1B94221FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +192,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3AC10D20FFB2110B454C380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClickNBuy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C3C43400BAA0C1B94221FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClickNBuy/Pods-ClickNBuy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClickNBuy/Pods-ClickNBuy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6A02237B219E5A1200FC0BB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -170,6 +246,7 @@
 			files = (
 				6A0223A0219EA37100FC0BB5 /* Resnet50.mlmodel in Sources */,
 				6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */,
+				6A54EDA2219EBC7600FB4122 /* VGG16.mlmodel in Sources */,
 				6A022385219E5A1200FC0BB5 /* ViewController.swift in Sources */,
 				6A02239A219E5E4600FC0BB5 /* ShoppingViewController.swift in Sources */,
 				6A022383219E5A1200FC0BB5 /* AppDelegate.swift in Sources */,
@@ -316,6 +393,7 @@
 		};
 		6A022392219E5A1300FC0BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBD7EB268933F95451B42771 /* Pods-ClickNBuy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -334,6 +412,7 @@
 		};
 		6A022393219E5A1300FC0BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 683A0D038B4C1EB8FEBE0BC3 /* Pods-ClickNBuy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

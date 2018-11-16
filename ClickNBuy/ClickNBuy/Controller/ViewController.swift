@@ -52,7 +52,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
         
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
-        guard let model = try? VNCoreMLModel(for: Resnet50().model) else { return }
+        guard let model = try? VNCoreMLModel(for: VGG16().model) else { return }
         let request = VNCoreMLRequest(model: model)
         { (finishReq, err) in
 //            print(finishReq.results)
