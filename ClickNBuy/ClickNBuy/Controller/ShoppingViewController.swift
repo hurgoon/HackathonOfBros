@@ -70,6 +70,8 @@ class ShoppingViewController: UIViewController, UISearchBarDelegate {
         self.minimumPriceText = searchBar.text ?? ""
         fetchNaverAPI(query: minimumPriceText)
         print("searchBar input: ", minimumPriceText)
+        searchBar.resignFirstResponder()
+        
     }
     
     private func fetchNaverAPI(query: String) {
