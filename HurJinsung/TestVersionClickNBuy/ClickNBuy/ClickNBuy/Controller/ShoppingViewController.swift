@@ -12,21 +12,22 @@ class ShoppingViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var minimumPriceSearch: UISearchBar!
     var minimumPriceText = String()
-    var shoppingArray: Array<Any> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        minimumPriceSearch.delegate = self
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.minimumPriceText = searchBar.text ?? ""
-        fetchNaverAPI(query: minimumPriceText)
-        print("searchBar input: ", minimumPriceText)
-    }
-    
-    private func fetchNaverAPI(query: String) {
         
+        minimumPriceSearch.delegate = self
+        
+        fetchNaverAPI(query: "apple")
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        self.minimumPriceText = searchBar.text ?? ""
+        print(minimumPriceText)
+        fetchNaverAPI(query: "\(minimumPriceText)")
+    }
+    
+     func fetchNaverAPI(query: String) {
         guard let url = URL(string: "https://openapi.naver.com/v1/search/shop.json?query=\(query)") else { return }
         var request = URLRequest(url: url)
         request.setValue("gXNHEbsr4g8csfZTGZCC", forHTTPHeaderField: "X-Naver-Client-Id")
@@ -37,13 +38,9 @@ class ShoppingViewController: UIViewController, UISearchBarDelegate {
             guard let data = data else { return }
             
             let shoppingList = try! JSONDecoder().decode(ShoppingList.self, from: data)
-            self.shoppingArray = shoppingList.items
-            print("self.shoppingArray :", self.shoppingArray)
-            print("shoppingArray[0]", self.shoppingArray[0])
-            print("shoppingArray[1]", self.shoppingArray[1])
+            print(shoppingList.items)
         })
+
         task.resume()
-        print("shoppingArray at fachNaverAPI: ", shoppingArray)
     }
-//    print("shoppingArrat at VC :", shoppingArray)
 }
