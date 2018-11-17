@@ -10,6 +10,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="zqg-03-rqM">
+            <objects>
+                <viewController id="oAC-9y-BLd" customClass="CollectionViewController" customModule="ClickNBuy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kET-md-yxm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzn-mo-L9u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4w5-09-VCj">
+                                <rect key="frame" x="0.0" y="56" width="375" height="450"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g13-S8-1Je">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="XA0-8c-WMg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b2-ox-qG9">
+                                <rect key="frame" x="2" y="544" width="376" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.72687246999999999" blue="0.54192288499999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Check Data Click if the Data were impletedmented well">
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkDataWhetherDataHasBeenSaved:" destination="oAC-9y-BLd" eventType="touchUpInside" id="3SY-pZ-oPt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aor-LV-uje"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="g5c-YQ-MQa"/>
+                    <connections>
+                        <outlet property="collectionViewTable" destination="4w5-09-VCj" id="V9k-eo-gNi"/>
+                        <outlet property="searchDisplayController" destination="evY-ri-QC2" id="Lw9-MU-H6I"/>
+                        <outlet property="searchForShopping" destination="zzn-mo-L9u" id="1y7-dc-qAC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xit-gz-ZKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="evY-ri-QC2">
+                    <connections>
+                        <outlet property="delegate" destination="oAC-9y-BLd" id="vnY-Uw-9L4"/>
+                        <outlet property="searchContentsController" destination="oAC-9y-BLd" id="8Ko-Ao-I4c"/>
+                        <outlet property="searchResultsDataSource" destination="oAC-9y-BLd" id="0Cb-cH-O9k"/>
+                        <outlet property="searchResultsDelegate" destination="oAC-9y-BLd" id="f7B-SL-woN"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-487.19999999999999" y="639.13043478260875"/>
+        </scene>
         <!--Shopping View Controller-->
         <scene sceneID="XYw-O6-Al0">
             <objects>
@@ -317,6 +385,7 @@
                     <connections>
                         <segue destination="XCW-tF-qfL" kind="relationship" relationship="viewControllers" id="ZPS-ZC-QzQ"/>
                         <segue destination="5pF-GX-2VF" kind="relationship" relationship="viewControllers" id="1Kf-oA-JGc"/>
+                        <segue destination="oAC-9y-BLd" kind="relationship" relationship="viewControllers" id="hkA-4c-Y0y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rr9-nx-eBW" userLabel="First Responder" sceneMemberID="firstResponder"/>

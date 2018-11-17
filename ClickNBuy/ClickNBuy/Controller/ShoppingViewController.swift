@@ -58,13 +58,6 @@ class ShoppingViewController: UIViewController, UISearchBarDelegate {
     var sixthLink = ""
     
     
-    // seventh item
-    
-    // eighth item
-    
-    // nineth item
-    
-    // tenth item
     
     
     
