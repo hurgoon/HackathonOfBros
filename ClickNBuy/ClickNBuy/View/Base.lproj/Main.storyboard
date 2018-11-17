@@ -40,6 +40,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Icon-icon" translatesAutoresizingMaskIntoConstraints="NO" id="EcX-au-AOZ">
                                 <rect key="frame" x="0.0" y="76" width="140" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sBi-Iv-mU0" appends="YES" id="izP-Km-JcE"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba0-t4-GyP">
                                 <rect key="frame" x="140" y="159" width="235" height="42"/>
@@ -73,6 +77,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Icon-icon" translatesAutoresizingMaskIntoConstraints="NO" id="gJh-Gq-q2X">
+                                <rect key="frame" x="-1" y="242" width="140" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nto-Zp-GBh">
                                 <rect key="frame" x="139" y="326" width="235" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,10 +142,63 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Icon-icon" translatesAutoresizingMaskIntoConstraints="NO" id="gJh-Gq-q2X">
-                                <rect key="frame" x="-1" y="242" width="140" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-bY-sge">
+                                <rect key="frame" x="0.0" y="76" width="374" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <connections>
+                                    <action selector="firstButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="QZl-0K-adb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLN-ou-e7Q">
+                                <rect key="frame" x="1" y="160" width="374" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="firstButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="2AE-Dd-K35"/>
+                                    <action selector="secondButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="ta2-YI-4VF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndo-2w-lMD">
+                                <rect key="frame" x="-1" y="241" width="374" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="firstButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="WNn-rA-7TK"/>
+                                    <action selector="secondButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="Btf-c2-dsf"/>
+                                    <action selector="thirdButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="GYA-j6-AWb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSN-EX-LhO">
+                                <rect key="frame" x="0.0" y="325" width="374" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="firstButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="gmj-VM-OkA"/>
+                                    <action selector="fourthButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="tfX-Gr-lDD"/>
+                                    <action selector="secondButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="5uh-yc-2qy"/>
+                                    <action selector="thirdButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="gYM-aN-853"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpA-4c-JiQ">
+                                <rect key="frame" x="1" y="407" width="374" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fifthButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="dmj-nv-1q6"/>
+                                    <action selector="firstButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="noq-mG-ZSD"/>
+                                    <action selector="fourthButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="mY8-b7-WCy"/>
+                                    <action selector="secondButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="tma-ao-Cls"/>
+                                    <action selector="thirdButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="G5M-xL-fOS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm5-xI-HXo">
+                                <rect key="frame" x="-2" y="489" width="374" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fifthButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="gtL-Lf-CJp"/>
+                                    <action selector="firstButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="LMt-bk-wrR"/>
+                                    <action selector="fourthButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="uaM-hp-Qf4"/>
+                                    <action selector="secondButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="H0K-aQ-vTL"/>
+                                    <action selector="sixthButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="ytI-Xn-jNi"/>
+                                    <action selector="thirdButtonDidTap:" destination="5pF-GX-2VF" eventType="touchUpInside" id="dYR-xi-Dbd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MFm-pl-M7r"/>
@@ -166,6 +227,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzi-xr-yX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sBi-Iv-mU0">
+                    <connections>
+                        <outlet property="delegate" destination="EcX-au-AOZ" id="61O-Y6-Vjg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="464.80000000000001" y="245.12743628185908"/>
         </scene>
