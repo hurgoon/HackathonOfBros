@@ -12,11 +12,17 @@ class CollectionViewController: UIViewController, UISearchBarDelegate {
     
     
     @IBOutlet weak var searchForShopping: UISearchBar!
-    @IBOutlet weak var collectionViewTable: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
+    
     
     var productName: [ String ] = []
     var lowestPrice: [String] = []
+    var image: [ String ] = []
+    
+    
+    
     var purchasedLink : [String] = []
+    var mallName : [ String ] = []
     
     var searchText = String()
     
@@ -34,6 +40,7 @@ class CollectionViewController: UIViewController, UISearchBarDelegate {
         self.searchText = searchBar.text ?? ""
         naverAPIFectch(query: searchText)
         searchBar.resignFirstResponder()
+        tableView.reloadData()
         
         
         
@@ -63,10 +70,17 @@ class CollectionViewController: UIViewController, UISearchBarDelegate {
                     self.productName.append(shoppingList.items[i].title)
                     self.lowestPrice.append(shoppingList.items[i].lprice)
                     self.purchasedLink.append(shoppingList.items[i].link)
+                    self.mallName.append(shoppingList.items[i].mallName)
+                    self.image.append(shoppingList.items[i].image)
+                    
+                 
                     
                 }
+                
+                
+              
             }
-            
+        
         }
         task.resume()
         
@@ -78,8 +92,38 @@ class CollectionViewController: UIViewController, UISearchBarDelegate {
         print(self.productName)
         print(lowestPrice)
         print(purchasedLink)
+        print("mallName: ", mallName)
+        
         
     }
     
     
 }
+
+extension CollectionViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if productName.count > 0 {
+            return productName.count
+        } else {
+            return 1
+
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: ItemCell.identifier, for: indexPath) as! ItemCell
+        
+        if productName.count > 0 {
+        cell.setupCell(productName: productName[indexPath.row], imageName:image[indexPath.row] , minimumPrice: lowestPrice[indexPath.row])
+        } else {
+            return cell
+        }
+        
+        
+        return cell
+    }
+    
+    
+    
+}
+

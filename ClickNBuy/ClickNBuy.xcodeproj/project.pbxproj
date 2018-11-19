@@ -16,6 +16,7 @@
 		6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */; };
 		6A02239A219E5E4600FC0BB5 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */; };
 		6A0223A0219EA37100FC0BB5 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */; };
+		6A14BC7121A2C759001CFFC7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14BC7021A2C759001CFFC7 /* ItemCell.swift */; };
 		6A54EDA2219EBC7600FB4122 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A54EDA1219EBC7600FB4122 /* VGG16.mlmodel */; };
 		6A69EF4F219FEAF30074186B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A69EF4E219FEAF30074186B /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		6A022399219E5E4600FC0BB5 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
+		6A14BC7021A2C759001CFFC7 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		6A54EDA1219EBC7600FB4122 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = VGG16.mlmodel; path = ../../../../../../../Downloads/VGG16.mlmodel; sourceTree = "<group>"; };
 		6A69EF4E219FEAF30074186B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		90C744B4BCA4F06C6D3CF885 /* Pods_ClickNBuy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClickNBuy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 		6A022397219E5B2600FC0BB5 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				6A14BC7021A2C759001CFFC7 /* ItemCell.swift */,
 				6A022395219E5B2100FC0BB5 /* ShoppingItem.swift */,
 				6A54EDA1219EBC7600FB4122 /* VGG16.mlmodel */,
 				6A02239F219EA37100FC0BB5 /* Resnet50.mlmodel */,
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A14BC7121A2C759001CFFC7 /* ItemCell.swift in Sources */,
 				6A0223A0219EA37100FC0BB5 /* Resnet50.mlmodel in Sources */,
 				6A022396219E5B2100FC0BB5 /* ShoppingItem.swift in Sources */,
 				6A54EDA2219EBC7600FB4122 /* VGG16.mlmodel in Sources */,
